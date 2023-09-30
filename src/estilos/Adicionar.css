@@ -1,0 +1,50 @@
+.adicionarForm{
+    width: 100%;
+    margin:1rem auto;
+    max-width: max-content;
+    display: flex;
+    flex-direction: column;
+}
+
+.adicionarForm h2{
+    text-align: center;
+    color: #fff;
+    font-size: 2em;
+    margin: 0 0 1rem 0;
+}
+
+.adicionarForm label{
+    color: #cccc;
+}
+
+.adicionarForm input[type='date']{
+    background-color: #ccc;
+    border: 1px solid #fff;
+    font-size: 1em;
+}
+
+.adicionarForm input[type='text'],
+.adicionarForm input[type='number'],
+.adicionarForm select{
+    outline: 0;
+    border: 1px solid #000;
+    font-size: 1em;
+    margin: 0.10rem;
+    padding: 0.25rem;
+}
+
+.adicionarForm select option{
+    text-transform: capitalize;
+}
+
+.adicionarForm button{
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: 0.2s;
+    outline: 0;
+    border: 0;
+}
+
+.adicionarForm button:hover{
+    background-color: #00ffff;
+}

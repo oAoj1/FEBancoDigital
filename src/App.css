@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap');
+
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'RocknRoll One',Arial, Helvetica, sans-serif;
+}
+
+:root{
+  --lilas:#c6b8ff;
+  --violeta:#3f1bcf;
+  --violetaEscuro:#120b2e;
+  --preto:#0d0a1c;
+}
+
+html{
+  scroll-behavior: smooth;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(60deg, var(--preto), var(--violetaEscuro));
+}

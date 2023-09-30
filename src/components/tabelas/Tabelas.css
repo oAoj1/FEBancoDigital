@@ -1,0 +1,29 @@
+.gastosTable,
+.depositosTable{
+    margin: 1rem 0;
+    background-color: #fff;
+    padding: 0.5rem;
+    border-radius: 10px;
+}
+
+.somas{
+    color: #cccc;
+}
+
+.gastosTable tr,
+.depositosTable tr{
+    background-color: #ccc;
+}
+
+.gastosTable tr td,
+.depositosTable tr td{
+    text-transform: capitalize;
+    padding: 0.25rem;
+}
+
+.gastosTable tr td input[type='date'],
+.depositosTable tr td input[type='date']{
+    background-color: transparent;
+    color: #000;
+    border: 0;
+}
