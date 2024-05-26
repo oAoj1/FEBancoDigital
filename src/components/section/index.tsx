@@ -10,7 +10,6 @@ import TabelaReservaInvestimento from '../tabelas/reservaInvestimento'
 import BotaoGastar from '../buttons/BotaoGastar.tsx'
 import BotaoDepositar from '../buttons/BotaoDepositar.tsx'
 
-import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 
 export default function Secao(){
@@ -87,7 +86,7 @@ export default function Secao(){
                     <h3>Depositos</h3>
 
                     <ul className='depositosSomados'>
-                        {somas.map(depositos => (
+                        {somas.map((depositos: any | string) => (
                             <li>Depositos somados: R$ {depositos.depositosSomados}</li>
                         ))}
                     </ul>
@@ -98,7 +97,7 @@ export default function Secao(){
                             <th>Valor</th>
                         </tr>
 
-                        {depositos.map(depositos => (
+                        {depositos.map((depositos: any | string) => (
                             <tr>
                                 <td><input type="date" value={depositos.data} disabled/></td>
                                 <td>R$ {depositos.valor}</td>

@@ -1,7 +1,7 @@
 import '../estilos/Adicionar.css'
 import api from './../api/api.ts'
 import { useNavigate } from 'react-router-dom'
-import { useState,useEffect } from 'react'
+import { useState, FormEvent } from 'react'
 
 export default function AdicionarGasto(){
 
@@ -52,7 +52,7 @@ export default function AdicionarGasto(){
         classificacao:""
     })
 
-    async function adicionandoGasto(event:React.FormElement<HTMLFormEvent>){
+    async function adicionandoGasto(event:FormEvent){
         event.preventDefault()
 
         await api.post('/gasto', novoGasto)

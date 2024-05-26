@@ -28,7 +28,7 @@ export default function TabelasReservaInvestimento(){
 
     return(
         <div>
-            {somasReservaInvestimento.map(somas => (
+            {somasReservaInvestimento.map((somas: any | string) => (
                 <p key={somas._id} className='somas'> 
                     Reserva/Investimento somado: R$ {somas.reservaInvestimentoSomado}
                 </p>
@@ -43,7 +43,7 @@ export default function TabelasReservaInvestimento(){
                     <th>Tipo</th>
                 </tr>
 
-                {gastos.map(gastos => (
+                {gastos.map((gastos: any | string) => (
                     <tr key={gastos._id}>
                         <td><input type="date" value={gastos.data} disabled/></td>
                         <td>R$ {gastos.valor}</td>

@@ -29,7 +29,7 @@ export default function TodasTabelas(){
 
     return(
         <div>
-            {geralSomado.map(somas => (
+            {geralSomado.map((somas:any | string) => (
                 <p key={somas._id} className='somas'> 
                     Geral somado: R$ {somas.gastosSomados}
                 </p>
@@ -45,7 +45,7 @@ export default function TodasTabelas(){
                     <th>Tipo</th>
                 </tr>
 
-                {gastos.map(gastos => (
+                {gastos.map((gastos:any | string) => (
                     <tr key={gastos._id}>
                         <td><input type="date" value={gastos.data} disabled/></td>
                         <td>R$ {gastos.valor}</td>

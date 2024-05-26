@@ -1,7 +1,7 @@
 import '../estilos/Adicionar.css'
 import api from '../api/api.ts'
 import { useNavigate } from 'react-router-dom'
-import { useState, useEffect } from 'react'
+import { useState, FormEvent } from 'react'
 
 export default function AdicionarDeposito(){
 
@@ -18,7 +18,7 @@ export default function AdicionarDeposito(){
         data:dataCompleta,
     })
 
-    async function adicionandoDeposito(event:React.FormElement<HTMLFormEvent>){
+    async function adicionandoDeposito(event:FormEvent){
         event.preventDefault()
 
         await api.post('/deposito', novoDeposito)

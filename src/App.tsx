@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import PaginaPrincipal from './Paginas/PaginaPrincipal.tsx'
-import AdicionarGasto from './Paginas/AdicionarGasto.tsx'
-import AdicionarDeposito from './Paginas/AdicionarDeposito.tsx'
-import EditarMetodos from './Paginas/EditarMetodos.tsx'
+import PaginaPrincipal from './paginas/PaginaPrincipal.tsx'
+import AdicionarGasto from './paginas/AdicionarGasto.tsx'
+import AdicionarDeposito from './paginas/AdicionarDeposito.tsx'
+import EditarMetodos from './paginas/EditarMetodos.tsx'
 
 export default function App(){
   return(

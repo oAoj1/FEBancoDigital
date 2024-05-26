@@ -28,7 +28,7 @@ export default function TabelaPessoal(){
 
     return(
         <div>
-            {somasPessoal.map(somas => (
+            {somasPessoal.map((somas:any | string) => (
                 <p key={somas._id} className='somas'> 
                     Pessoal somado: R$ {somas.pessoalSomado}
                 </p>
@@ -44,7 +44,7 @@ export default function TabelaPessoal(){
                     <th>Tipo</th>
                 </tr>
 
-                {gastos.map(gastos => (
+                {gastos.map((gastos:any | string) => (
                     <tr key={gastos._id}>
                         <td><input type="date" value={gastos.data} disabled/></td>
                         <td>R$ {gastos.valor}</td>

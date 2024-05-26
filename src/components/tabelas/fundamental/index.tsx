@@ -28,7 +28,7 @@ export default function TabelaFundamental(){
 
     return(
         <div>
-            {somasFundamental.map(somas => (
+            {somasFundamental.map((somas:any | string) => (
                 <p key={somas._id} className='somas'> 
                     Fundamental somado: R$ {somas.fundamentalSomado}
                 </p>
@@ -44,7 +44,7 @@ export default function TabelaFundamental(){
                     <th>Tipo</th>
                 </tr>
 
-                {gastos.map(gastos => (
+                {gastos.map((gastos: any | string) => (
                     <tr key={gastos._id}>
                         <td><input type="date" value={gastos.data} disabled/></td>
                         <td>R$ {gastos.valor}</td>
