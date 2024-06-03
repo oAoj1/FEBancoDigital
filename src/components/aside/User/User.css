@@ -1,0 +1,58 @@
+
+.user{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--preto);   
+}
+
+.tituloUser{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.tituloUser .mensagemUsuario svg{
+    margin-right: 0.5rem;
+    font-size: 2rem;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    color: #fff;
+}
+
+.tituloUser .configuracao svg{
+    font-size: 2rem;
+    color: #cccc;
+    cursor: pointer;
+}
+
+.tituloUser h2{
+    color: #fff;
+    font-weight: normal;
+    margin-left: 0.25rem;
+    font-size: 1.25em;
+}
+
+.saldoUser{
+    padding: 0 0 1rem 1rem;
+}
+
+.saldoUser span{
+    font-size: 1em;
+    color: #ccc;
+    font-weight: lighter;
+}
+
+.saldoUser h2{
+    font-weight: normal;
+    font-size: 2em;
+    color: #fff;
+}
+
+@media screen and (max-width:768px){
+    .aside{
+        max-width: 100vw;
+        min-height: 100%;
+        padding-bottom: 1rem;
+    }   
+}

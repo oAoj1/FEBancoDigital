@@ -1,0 +1,7 @@
+.aside{
+    width: 100%;
+    max-width: 30vw;
+    min-height: 100vh;
+    border-right: 1px solid #fff;
+    background-color: #000;
+}

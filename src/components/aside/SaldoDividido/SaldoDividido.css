@@ -1,0 +1,95 @@
+.saldoDividido{
+    width: 100%;
+    padding: 0.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.tituloSaldoDividido{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tituloSaldoDividido button{
+    background-color: transparent;
+    border: 0;
+    font-size: 1.15em;
+    color: #fff;
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.tituloSaldoDividido button:active{
+    transition: 0.5ms ease;
+    color: var(--roxo5);
+    text-decoration: underline;
+}
+
+.tituloSaldoDividido button svg{
+    font-size: 0.75em;
+    margin-left: 0.25rem;
+}
+
+.saldoDividido h3{
+    font-size: 1.25em;
+    color: #cccc;
+    font-weight: normal;
+}
+
+.divisoes{
+    margin: 1rem 0 0 0;
+    display: flex;
+    align-items: center;
+}
+
+.fundamental,
+.pessoal,
+.reserva{
+    width: 100%;
+    height: 100%;
+    background-color: var(--violetaEscuro);
+    padding: 0.20rem;
+    margin: 0.5rem 0.5rem 0 0;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid #fff;
+}
+
+.fundamental h3,
+.pessoal h3,
+.reserva h3{
+    font-size: 1rem;
+    color: #cccc;
+    font-weight: lighter;
+}
+
+.fundamental h2,
+.pessoal h2,
+.reserva h2{
+    font-size: 1.15rem;
+    color: #fff;
+    font-weight: normal;
+}
+
+.fundamental h2 b,
+.pessoal h2 b,
+.reserva h2 b{
+    font-size: 1rem;
+}
+
+.fundamental h2 i,
+.pessoal h2 i,
+.reserva h2 i{
+    font-size: 1rem;
+}
+
+@media screen and (max-width:980px){
+    .divisoes{
+        max-width: max-content;
+        margin: 1rem auto;
+        flex-wrap: wrap;
+    }
+}

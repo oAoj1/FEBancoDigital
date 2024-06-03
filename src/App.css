@@ -1,16 +1,40 @@
-@import url('https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
 
 *{
   margin:0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'RocknRoll One',Arial, Helvetica, sans-serif;
+  font-family: 'Source Serif 4',sans-serif,Arial, Helvetica;
 }
 
 :root{
+  /* amarelo - dinheiro */
+  --amarelo1:#D1DE1D;
+  --amarelo2:#EBC03F;
+  --amarelo3:#EBAA3F;
+  --amarelo4:#EBE83F;
+  --amarelo5:#EBD43F;
+  
+  /* verde - seguranca */
+  --verde1:#30DE1D;
+  --verde2:#30DE1D;
+  --verde3:#80DE1D;
+  --verde4:#6FE063;
+  --verde5:#1DDE4F;
+  --verde6:#1CE090;
+
+  /* roxo - nobreza*/
+  --roxo1:#F193FF;
+  --roxo2:#FC58C2;
+  --roxo3:#E758FC;
+  --roxo4:#B158FC;
+  --roxo5:#7B58FC;
+
   --lilas:#c6b8ff;
   --violeta:#3f1bcf;
   --violetaEscuro:#120b2e;
+
+  /* preto */
   --preto:#0d0a1c;
 }
 
@@ -18,5 +42,5 @@ html{
   scroll-behavior: smooth;
   width: 100%;
   height: 100%;
-  background: linear-gradient(60deg, var(--preto), var(--violetaEscuro));
+  background-color: var(--violetaEscuro);
 }
