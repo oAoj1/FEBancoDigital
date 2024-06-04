@@ -55,8 +55,6 @@ export default function SomasGerais({props}:any|string){
         }
     },[])
 
-    console.log(somasGerais)
-
     return(
         <div className="somasGerais">
             <p key={somasGerais._id}>

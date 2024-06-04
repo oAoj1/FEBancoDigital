@@ -6,6 +6,8 @@ import { useState,useEffect } from 'react'
 
 import { FaChevronRight } from "react-icons/fa"
 
+import { Link } from 'react-router-dom'
+
 export default function SaldoDividido(){
 
     const [saldoDividido,setSaldoDividido] = useState<any>({})
@@ -55,7 +57,12 @@ export default function SaldoDividido(){
         <div className="saldoDividido">
             <div className="tituloSaldoDividido">
                 <h3>Saldo dividido</h3>
-                <button>Editar <FaChevronRight/></button>
+                <button>
+                    <Link to='/editarmetodo'>
+                        Editar 
+                        <FaChevronRight/>
+                    </Link>
+                </button>
             </div>
 
             <div className="divisoes">

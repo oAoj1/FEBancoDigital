@@ -1,0 +1,59 @@
+.formEditPorcentagemMetodo{
+    width: 100%;
+    max-width: max-content;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--roxo4);
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    position: relative;
+    animation: open 0.5s ease;
+}
+
+.formEditPorcentagemMetodo h1{
+    text-align: center;
+    font-size: 3em;
+    color: #fff;
+    font-weight: normal;
+}
+
+.formEditPorcentagemMetodo input,
+.formEditPorcentagemMetodo select{
+    font-size: 1em;
+    outline: 0;
+    border: 1px solid #cccc;
+    margin: 0.15rem 0;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 0.15rem;
+}
+
+.formEditPorcentagemMetodo input[type = 'date']{
+    background-color: #ccc;
+}
+
+.formEditPorcentagemMetodo button{
+    margin: 0.5rem 0 0 0;
+    background-color: #fff;
+    font-size: 1rem;
+    color: #000;
+    font-weight: bold;
+    filter: drop-shadow(1px 1px 5px rgba(0,0,0,0.5));
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid #000;
+}
+
+.formEditPorcentagemMetodo button:active{
+    transition: 0.15s;
+    background-color: var(--amarelo1);
+}
+
+.voltar{
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    font-size: 1.5em;
+    color: #ffff;
+}
