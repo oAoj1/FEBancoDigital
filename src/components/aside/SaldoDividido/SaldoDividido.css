@@ -22,7 +22,11 @@
     cursor: pointer;
 }
 
-.tituloSaldoDividido button:active{
+.tituloSaldoDividido button a{
+    color: #fff;
+}
+
+.tituloSaldoDividido button a:active{
     transition: 0.5ms ease;
     color: var(--roxo5);
     text-decoration: underline;
