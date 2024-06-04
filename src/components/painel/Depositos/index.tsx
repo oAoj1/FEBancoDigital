@@ -7,13 +7,12 @@ import { useState,useEffect } from 'react'
 import SomasGerais from '../Somas'
 
 import { IoMdAdd } from "react-icons/io"
-import AddDeposito from '../../formularios/addDeposito/addDeposito'
+
+import { Link } from 'react-router-dom'
 
 export default function Depositos(){
 
     const [depositos,setDepositos] = useState<any>([])
-
-    const [isOpenForm,setIsOpenForm] = useState(false)
 
     useEffect(() => {
         async function lerDepositos(){
@@ -31,15 +30,14 @@ export default function Depositos(){
         <div className="depositos">
             <div className="tituloDepositos">
                 <h2>Depositos</h2>
-                <button onClick={() => setIsOpenForm(!isOpenForm)}>
-                    <IoMdAdd/>
+                <button>
+                    <Link to='/adicionardeposito'>
+                        <IoMdAdd/>
+                    </Link>
                 </button>
-
-                <div className="formDepositos">
-                    {isOpenForm ? <AddDeposito/> : ''}
-                </div>
                 
             </div>
+            
             <SomasGerais
                 props='depositosSomados'
             />

@@ -4,7 +4,9 @@ import api from '../../../api/api'
 
 import { FormEvent, useState } from 'react'
 
-import { FaCaretLeft } from "react-icons/fa6"
+import { FaArrowLeft } from "react-icons/fa6"
+
+import { Link } from 'react-router-dom'
 
 export default function AddGasto(){
 
@@ -43,50 +45,58 @@ export default function AddGasto(){
             }
     }
 
-    return(
-        <form 
-            onSubmit={adicionarGasto}
-            className='formAddGasto'
-        >
-            <FaCaretLeft/>
-            <input 
-                onChange={e => setNovoGasto({
-                    ...novoGasto,nome:e.target.value
-                })}
-                type="text" 
-                placeholder='Nome'
-                required
-            />
+    return( 
+        <div style={{display:'flex',flexDirection:'column',alignItems:'center'}}>
 
-            <input 
-                onChange={e => setNovoGasto({
-                    ...novoGasto,valor:e.target.value
-                })}
-                type="number" 
-                placeholder='Valor(R$)'
-                required
-            />
+            <Link to='/seubanco' className='voltar'>
+                <FaArrowLeft/>
+                <p>Voltar</p>
+            </Link>
 
-            <select
-                required
-                onChange={e => setNovoGasto({
-                    ...novoGasto,classificacao:e.target.value
-                })}
+            <form 
+                onSubmit={adicionarGasto}
+                className='formAddGasto'
             >
-                {classificacoes.map(classificacoes => (
-                    <option key={classificacoes}>
-                        {classificacoes}
-                    </option>
-                ))}
-            </select>
+                <h1>Gasto</h1>
+                <input 
+                    onChange={e => setNovoGasto({
+                        ...novoGasto,nome:e.target.value
+                    })}
+                    type="text" 
+                    placeholder='Nome'
+                    required
+                />
 
-            <input 
-                type="date" 
-                value={diaHoje}
-                disabled
-            />
+                <input 
+                    onChange={e => setNovoGasto({
+                        ...novoGasto,valor:e.target.value
+                    })}
+                    type="number" 
+                    placeholder='Valor(R$)'
+                    required
+                />
 
-            <button>Adicionar</button>
-        </form>
+                <select
+                    required
+                    onChange={e => setNovoGasto({
+                        ...novoGasto,classificacao:e.target.value
+                    })}
+                >
+                    {classificacoes.map(classificacoes => (
+                        <option key={classificacoes}>
+                            {classificacoes}
+                        </option>
+                    ))}
+                </select>
+
+                <input 
+                    type="date" 
+                    value={diaHoje}
+                    disabled
+                />
+
+                <button>Adicionar</button>
+            </form>
+        </div>
     )
 }

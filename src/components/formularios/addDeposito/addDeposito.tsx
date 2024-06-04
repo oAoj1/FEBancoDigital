@@ -4,7 +4,9 @@ import api from '../../../api/api'
 
 import { useState,FormEvent } from 'react'
 
-import { FaCaretLeft } from "react-icons/fa6"
+import { FaArrowLeft } from "react-icons/fa6"
+
+import { Link } from 'react-router-dom'
 
 export default function AddDeposito(){
 
@@ -35,28 +37,34 @@ export default function AddDeposito(){
     }
 
     return(
-        <form 
-            onSubmit={adicionarDeposito}
-            className='formAddDeposito'
-        >
-            <FaCaretLeft/>
+        <div style={{display:'flex',flexDirection:'column',alignItems:'center'}}>
+            <Link to='/seubanco' className='voltar'>
+                <FaArrowLeft/>
+                <p>Voltar</p>
+            </Link>
 
-            <input 
-                onChange={e => setNovoDeposito({
-                    ...novoDeposito,valor:e.target.value
-                })}
-                type="number" 
-                placeholder='Valor(R$)'
-                required
-            />
+            <form 
+                onSubmit={adicionarDeposito}
+                className='formAddDeposito'
+            >
+                <h1>Deposito</h1>
+                <input 
+                    onChange={e => setNovoDeposito({
+                        ...novoDeposito,valor:e.target.value
+                    })}
+                    type="number" 
+                    placeholder='Valor(R$)'
+                    required
+                />
 
-            <input 
-                type="date" 
-                value={diaHoje}
-                disabled
-            />
+                <input 
+                    type="date" 
+                    value={diaHoje}
+                    disabled
+                />
 
-            <button>Adicionar</button>
-        </form>
+                <button>Adicionar</button>
+            </form>
+        </div>
     )
 }

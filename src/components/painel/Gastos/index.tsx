@@ -11,12 +11,11 @@ import ListaGastosReservaInvestimento from './ListaGastos/ListaGastosReservaInve
 
 import { IoMdAdd } from "react-icons/io"
 
-import AddGasto from '../../formularios/addGasto/addGasto'
+import { Link } from 'react-router-dom'
 
 export default function Gastos(){
 
     const [classificacaoGasto,setClassificacaoGastos] = useState('')
-    const [isOpenForm,setIsOpenForm] = useState(false)
 
     const listaClassificacoes = [
         '',
@@ -30,14 +29,12 @@ export default function Gastos(){
         <div className="gastos">
             <div className="tituloGastos">
                 <h2>Gastos</h2>
-                <button onClick={() => setIsOpenForm(!isOpenForm)}>
-                    <IoMdAdd/>
+                <button>
+                    <Link to='/adicionargasto'>
+                        <IoMdAdd/>
+                    </Link>
                 </button>
 
-                <div className="formGastos">
-                    {isOpenForm ? <AddGasto/> : ''}
-                </div>
-                
             </div>
 
             <select onChange={e => setClassificacaoGastos(e.target.value)}>
@@ -47,6 +44,8 @@ export default function Gastos(){
                     </option>
                 ))}
             </select>
+
+            
 
             <SomasGerais
                 props={

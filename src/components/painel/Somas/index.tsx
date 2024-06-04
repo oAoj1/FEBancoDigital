@@ -13,8 +13,39 @@ export default function SomasGerais({props}:any|string){
             async function lerSomasGerais(){
                 const response = await api.get('/somasgerais')
                 const data = response.data
-    
-                setSomasGerais(data[0])
+
+                const gastosFormatados = Number(data[0].gastosSomados).toLocaleString('pt-BR', {
+                    minimumFractionDigits: 2,
+                    maximumFractionDigits: 2
+                })
+
+                const depositosFormatados = Number(data[0].depositosSomados).toLocaleString('pt-BR', {
+                    minimumFractionDigits: 2,
+                    maximumFractionDigits: 2
+                })
+
+                const fundamentalFormatados = Number(data[0].fundamentalSomado).toLocaleString('pt-BR', {
+                    minimumFractionDigits: 2,
+                    maximumFractionDigits: 2
+                })
+
+                const pessoalFormatados = Number(data[0].pessoalSomado).toLocaleString('pt-BR', {
+                    minimumFractionDigits: 2,
+                    maximumFractionDigits: 2
+                })
+
+                const reservaInvestimentoFormatados = Number(data[0].reservaInvestimentoSomado).toLocaleString('pt-BR', {
+                    minimumFractionDigits: 2,
+                    maximumFractionDigits: 2
+                })
+
+                setSomasGerais({
+                    gastosSomados:gastosFormatados,
+                    depositosSomados:depositosFormatados,
+                    fundamentalSomado:fundamentalFormatados,
+                    pessoalSomado:pessoalFormatados,
+                    reservaInvestimentoSomado:reservaInvestimentoFormatados
+                })
             }
     
             lerSomasGerais()
@@ -23,6 +54,8 @@ export default function SomasGerais({props}:any|string){
             console.log(error)
         }
     },[])
+
+    console.log(somasGerais)
 
     return(
         <div className="somasGerais">

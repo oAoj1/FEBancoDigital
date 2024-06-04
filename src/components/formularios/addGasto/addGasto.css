@@ -7,26 +7,15 @@
     padding: 10px;
     border-radius: 10px;
     border: 1px solid #fff;
-    z-index: 1;
-    position: absolute;
-    top: 35px;
-    right: 42.5%;
+    position: relative;
     animation: open 0.5s ease;
 }
 
-.formAddGasto svg:nth-of-type(1){
-    position: absolute;
-    top: 50px;
-    font-size: 2em;
-    left: -15px;
-    color: var(--roxo4);
-}
-
-.formAddGasto svg:nth-of-type(2){
-    color: #a70000;
-    font-size: 1.5em;
-    padding: 0;
-    cursor: pointer;
+.formAddGasto h1{
+    text-align: center;
+    font-size: 3em;
+    color: #fff;
+    font-weight: normal;
 }
 
 .formAddGasto input,
@@ -59,4 +48,12 @@
 .formAddGasto button:active{
     transition: 0.15s;
     background-color: var(--amarelo1);
+}
+
+.voltar{
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    font-size: 1.5em;
+    color: #ffff;
 }

@@ -43,7 +43,7 @@ export default function ListaGastosFundamental(){
                         <FaAngleRight/>
                     </button>
                     
-                    <div style={{position:'absolute'}}>
+                    <div /* style={{position:'absolute'}} */>
                         {isOpenSaibaMais && gastos._id == idGasto ? 
                             <div className="saibaMais">
                                 <FaCaretLeft/>
